@@ -1,0 +1,39 @@
+1.course
+ CourseId,Title,StartTime,EndTime,CoverImgId,MaxPerson,Province,City,Address,x,y,Desc,,Price,Tags,Status,AddTime,UpdateTime
+课程介绍
+
+课程提纲
+
+老师告诉你能学到什么？
+
+
+2.teacher
+  AvatarId,Name, Sex, LiveLocation,Info,Desc,Tags
+
+
+3.Student
+  StudentId,Name,Sex,Mobile,Email,Weixin,QQ,Weibo,Tags,Likes,Birthday,CorpName,JobTitle
+
+
+4 Course,Student
+  StudentId,CourseId,AuditStatus,AuditBy,AuditTime
+
+
+5.video
+  CourseId,VideoId,Title,Url,CoverVideoPic,Author
+
+6.Image
+  ImageId,title,Url,MinImage
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
