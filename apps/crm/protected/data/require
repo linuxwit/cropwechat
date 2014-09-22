@@ -1,5 +1,32 @@
+
+课程管理　
+　　　选老师
+　　　添加，编辑，删除，发布，撤消发布
+　　　　　 添加学员，查看学员，编辑学员，
+　　　查找课程
+　　　　　　
+老师管理　
+　　　添加，编辑，删除
+　　　查找老师
+
+报名：
+　　　学员填写报名信息，
+　　　生成报名二维码
+　　　　　　
+核查签到：
+　　　　 手机扫描客户的报名二维码直接认证签到
+
+生成广告链接
+　　　报表
+
+学员管理
+　　　　加学员，选课程，打标签
+　　　　查找学员
+　　　　　　　　
+　　　　　
+
 1.course
- CourseId,Teacher,Title,StartTime,EndTime,CoverImgId,MaxPerson,Province,City,Address,x,y,Desc,Price,,Status,AddTime,UpdateTime,Tags,Mark
+ CropId,CourseId,Teacher,Title,StartTime,EndTime,CoverImgId,MaxPerson,Province,City,Address,x,y,Desc,Price,,Status,AddTime,UpdateTime,Tags,Mark
 课程介绍
 
 课程提纲
@@ -7,27 +34,29 @@
 老师告诉你能学到什么？
 
 2.teacher
-  AvatarId,Name, Sex, LiveLocation,Info,Desc,Tags,Mark
+  CropId,AvatarId,Name, Sex, LiveLocation,Info,Desc,Tags,Mark
 
 
 3.Student
-  StudentId,Name,Sex,Mobile,Email,Weixin,QQ,Weibo,Tags,Likes,Birthday,CorpName,JobTitle,Mark
+  CropId,StudentId,Name,Sex,Mobile,Email,Weixin,QQ,Weibo,Tags,Likes,Birthday,CorpName,JobTitle,Mark
 
-
-4 Course,Student
-  StudentId,CourseId,SPM,AuditStatus,AuditBy,AuditTime
-
+4 (Course,Student)
+  CropId,StudentId,CourseId,SpmCode,AuditStatus,AuditBy,AuditTime
 
 6.Image
-  ImageId,title,Url,MinImage,BigImage,AddTime,AddBy
+  CropId,ImageId,title,Url,MinImage,BigImage,AddTime,AddBy
 
 7.Channel
-  id,Code,Mobile,SourceUrl,ShortUrl,ChannelName,UV,PV,AddTime,Mark
-8.video
-  CourseId,VideoId,Title,Url,CoverVideoPic,Author
+  CropId,ChnnelId,SpmCode,Mobile,SourceUrl,ShortUrl,ChannelName,UV,PV,AddTime,Mark
 
-9.url
- 
+8.video
+  CropId,CourseId,VideoId,Title,Url,CoverVideoPic,Author
+
+9.PageViewLog
+  Id,SpmCode,FromUrl,FromIP,ClientAgent,ViewTime
+
+User
+ CropId,UserId,Password,CropWeixinId,Mobile,Email
 
 
 
