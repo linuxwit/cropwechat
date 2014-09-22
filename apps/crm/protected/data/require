@@ -22,10 +22,12 @@
   ImageId,title,Url,MinImage,BigImage,AddTime,AddBy
 
 7.Channel
-  Id,Name,Mobile,Tel,Type,Mark
-
+  id,Code,Mobile,SourceUrl,ShortUrl,ChannelName,UV,PV,AddTime,Mark
 8.video
   CourseId,VideoId,Title,Url,CoverVideoPic,Author
+
+9.url
+ 
 
 
 
