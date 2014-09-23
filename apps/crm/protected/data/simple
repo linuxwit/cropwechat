@@ -1,0 +1,24 @@
+  public function actionIndex() {
+        $qiniu = Yii::app()->qiniu;
+        echo $upToken = $qiniu->getUploadToken();
+       // $key = 'test';
+
+       // $qiniu->uploadText($upToken, $key, 'Test Text');
+    }
+
+    public function actionImage() {
+        $qiniu = Yii::app()->qiniu;
+        $upToken = $qiniu->getUploadToken();
+        $file = Yii::app()->basePath . '/../themes/mobile/assets/images/demo/browser-pic-2.jpg';
+        $key = 'img' . date('YmdHis');
+        $result = $qiniu->uploadFile($upToken, $key, $file);
+
+        var_dump($result);
+    }
+
+    public function actionIp() {
+
+        $data = Yii::app()->ip->getIpInfo('180.166.76.215');
+
+        var_dump($data);
+    }

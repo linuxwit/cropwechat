@@ -18,6 +18,9 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.extensions.qiniu.Client',
+        'application.extensions.iptaobao.Client',
+        'application.extensions.yii-mail.*'
 	),
 
 	'modules'=>array(
@@ -38,6 +41,27 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+		'qiniu' => array(
+            'class' => 'ext.qiniu.Client',
+            'accessKey' => 'YG9uh4iBBLoeX20AeoAZKQIctJjn0fdH5UXoPNkC',
+            'secretKey' => 'lZAgNj8yCY_TmcPbcX4fPHPqB-Zg1h7IlaOyZpcb',
+            'bucket' => 'onesale'
+        ),
+        'ip' => array('class' => 'ext.iptaobao.Client'),
+        'mail' => array(
+            'class' => 'application.extensions.yii-mail.YiiMail',
+            'transportType' => 'smtp', /// case sensitive!
+            'transportOptions' => array(
+                'host' => 'smtp.exmail.qq.com',
+                'username' => 'support@witleaf.com',
+                'password' => 'zaq12wsx', //密码
+                'port' => '25',
+            // 'encryption' => 'ssl', //启用ssl安全链接的话，port改为对应的端口
+            ),
+            'viewPath' => 'application.views.mail',
+            'logging' => true,
+            'dryRun' => false,
+        ),
 		// uncomment the following to enable URLs in path-format
 		/*
 		'urlManager'=>array(
