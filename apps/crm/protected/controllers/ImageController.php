@@ -1,10 +1,8 @@
-<?php 
-class ImageController extends CController{
+<?php
 
+class ImageController extends CController {
 
-	
-
-	public function actionUpload(){
-
-	}
+    public function actionUpload() {
+        
+    }
 }
