@@ -10,6 +10,7 @@
  <button id="select">SELECT</button>
   <div id="previews"></div>
 
+  
   <script type="text/javascript">
     (function($) {
       var images = qiniu.bucket(<?php echo $bucket ?>, {

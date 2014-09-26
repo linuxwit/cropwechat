@@ -20,7 +20,9 @@
         <link rel="shortcut icon" href="<?php echo Yii::app()->theme->baseUrl; ?>/assets/ico/favicon.png">
     </head>
     <body>
-        <?php echo $content ?>
+       <?php echo $content?>
+
+         
         <!-- Footer
         ================================================== -->
         <footer class="bs-footer" role="contentinfo" style="background-color:#EDEDED;margin-top: 0px;padding-top: 10px">
@@ -28,9 +30,11 @@
                 <p class="text-center">WitLeaf © 2014. All Rights Reserved.</p>
             </div>
         </footer>
-        <script src="http://code.jquery.com/jquery.min.js"></script>
-        <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/bootstrap.min.js"></script>
-        <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/bootbox.min.js"></script>
-        <script src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/js/crm.js"></script>
+        <script src="<?php echo Yii::app()->baseUrl; ?>/static/lib/seajs/2.3.0/sea.js"></script>
+        <script>
+          seajs.config({
+            base: '<?php echo Yii::app()->baseUrl; ?>/static',
+          }).use('js/init');
+        </script>
     </body>
 </html>
